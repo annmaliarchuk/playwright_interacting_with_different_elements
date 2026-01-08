@@ -34,7 +34,7 @@ test.describe('Workshop 7 - User form', () => {
     };
 
     test.beforeEach(async ({ page }) => {
-        await page.goto('http://localhost:52330/tests/user_form/index.html');
+        await page.goto('/tests/user_form/index.html');
     });
 
     

@@ -9,7 +9,7 @@ const testData = {
 
 test.describe('User registration tests', () => {
 test.beforeEach(async ({ page }) => {
-    await page.goto('http://localhost:52330/tests/user_registration/index.html');
+    await page.goto('/tests/user_registration/index.html');
 });
 
     test('Register with valid data', async ({ page }) => {

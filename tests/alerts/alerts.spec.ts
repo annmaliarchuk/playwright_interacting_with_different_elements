@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('Open Alert', async ({page}) => {
-    await page.goto('http://localhost:52330/tests/alerts/index.html');
+    await page.goto('/tests/alerts/index.html');
 
     let alertMessage = '';
 
@@ -15,7 +15,7 @@ test('Open Alert', async ({page}) => {
 });
 
 test('Confirm Alert', async ({page}) => {
-    await page.goto('http://localhost:52330/tests/alerts/index.html');
+    await page.goto('/tests/alerts/index.html');
 
     let alertMessage = '';
 
@@ -29,7 +29,7 @@ test('Confirm Alert', async ({page}) => {
 
 test('Handling POP-UPs', async ({page}) => {
 
-    await page.goto('http://localhost:52330/tests/alerts/index.html');
+    await page.goto('/tests/alerts/index.html');
 
     const [popup] = await Promise.all([
         page.waitForEvent('popup'),

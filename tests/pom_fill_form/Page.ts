@@ -34,7 +34,7 @@ export class StudentPage {
   }
 
   async goto() {
-    await this.page.goto('http://localhost:52330/tests/pom_fill_form/index.html');
+    await this.page.goto('/tests/pom_fill_form/index.html');
   }
 
   async fill(user: User) {

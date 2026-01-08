@@ -25,11 +25,16 @@ export default defineConfig({
   reporter: 'list',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: 'http://127.0.0.1:52330',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+  },
+  webServer: {
+    command: 'npx http-server . -p 52330 -a 127.0.0.1 -c-1',
+    url: 'http://127.0.0.1:52330',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
   },
 
   /* Configure projects for major browsers */
